@@ -1,15 +1,18 @@
-// Ratio of chainring and cog using OOP 
+// Passing object as an argument
+
 
 class Gear {
 	int chainring, cog;
-	Gear(int chainring, int cog)
+	Wheel obj;
+	Gear(int chainring, int cog, Wheel obj)
 	{
 		this.chainring = chainring;
 		this.cog = cog;
+		this.obj = obj
 	}
-	double ratio()
+	public double gear_inches()
 	{
-		return (double)chainring/cog;
+		
 	}
 }
 
@@ -21,9 +24,7 @@ public class my_class2 {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println( new Gear(52, 11).ratio());
-		System.out.println( new Gear(30, 27).ratio());
-		
+		Gear(52,11,new Wheel(26, 1.5)).gear_inches()
 	}
 
 }
